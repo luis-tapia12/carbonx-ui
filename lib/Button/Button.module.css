@@ -1,0 +1,13 @@
+.button {
+	border: none;
+	border-radius: var(--radius-size);
+	background: var(--primary-color);
+	color: var(--text-color);
+	cursor: pointer;
+	padding: var(--padding-y-sm) var(--padding-x-sm);
+}
+
+.button:disabled {
+	opacity: 0.75;
+	cursor: default;
+}
