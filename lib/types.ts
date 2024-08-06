@@ -13,3 +13,5 @@ export type CSSUnit =
 	| 'ch';
 
 export type CSSDimension = `${number}${CSSUnit}`;
+
+export type Size = 'sm' | 'md' | 'lg' | 'xl';

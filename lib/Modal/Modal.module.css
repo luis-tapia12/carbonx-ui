@@ -1,0 +1,109 @@
+.modalContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.enter {
+	opacity: 0;
+}
+
+.enterActive {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.exit {
+	opacity: 1;
+}
+
+.exitActive {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out 0.1s;
+}
+
+.enter .modal {
+	transform: translateY(-50px);
+	opacity: 0;
+}
+
+.enterActive .modal {
+	transform: translateY(0);
+	opacity: 1;
+	transition: all 0.3s ease-in-out 0.1s;
+}
+
+.exit .modal {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.exitActive .modal {
+	transform: translateY(-50px);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.modalTitle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modalTitle > button > img {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+.modalTitle > button {
+	border: none;
+	border-radius: var(--radius-size);
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	padding: 4px;
+	opacity: 0.8;
+}
+
+.modalTitle > button:hover {
+	background-color: rgb(from var(--primary-color) r g b / 10%);
+	opacity: 1;
+}
+
+.modal {
+	margin: 2rem auto;
+}
+
+.modal.sm {
+	width: 300px;
+}
+
+.modal.md {
+	width: 500px;
+}
+
+.modal.lg {
+	width: 800px;
+}
+
+.modal.xl {
+	border: none;
+	border-radius: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0 !important;
+}
+
+.enter .modal.xl {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.exit .modal.xl {
+	transform: translateY(0);
+	opacity: 1;
+}
