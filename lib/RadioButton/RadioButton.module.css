@@ -1,0 +1,43 @@
+.radioContainer {
+	display: flex;
+	align-items: center;
+}
+
+.radio {
+	width: 1.2rem;
+	height: 1.2rem;
+	appearance: none;
+	border: 1px solid var(--border-color);
+	border-radius: 50%;
+	display: flex;
+	transition: all 0.2s ease-in-out;
+	margin: 0 0.5rem 0 0;
+}
+
+.radio:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 35%);
+	outline: 0;
+}
+
+.radio::after {
+	transition: all 0.2s ease-in-out;
+	opacity: 0;
+	display: block;
+	height: 1.2rem;
+	width: 1.2rem;
+	line-height: 1.2rem;
+	text-align: center;
+	font-weight: 900;
+	font-size: 1rem;
+	color: var(--secondary-color);
+	content: '●';
+}
+
+.radio:checked {
+	background-color: var(--primary-color);
+}
+
+.radio:checked::after {
+	opacity: 1;
+}
