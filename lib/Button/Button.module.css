@@ -1,13 +1,62 @@
 .button {
 	border: none;
 	border-radius: var(--radius-size);
-	background: var(--primary-color);
+	background-color: var(--primary-color);
 	color: var(--text-color);
 	cursor: pointer;
 	padding: var(--padding-y-sm) var(--padding-x-sm);
 }
 
+.button:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 35%);
+}
+
 .button:disabled {
 	opacity: 0.75;
 	cursor: default;
+}
+
+.button:active:not(:disabled) {
+	transform: scale(0.975);
+}
+
+.button.secondary {
+	background-color: var(--text-color);
+	color: var(--primary-color);
+}
+
+.button.success {
+	background-color: var(--success-color);
+}
+
+.button.error {
+	background-color: var(--error-color);
+}
+
+.button.warn {
+	background-color: var(--warn-color);
+}
+
+.button.info {
+	background-color: var(--info-color);
+}
+
+.button.secondary:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 10%);
+}
+
+.button.success:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--success-color) r g b / 35%);
+}
+
+.button.error:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--error-color) r g b / 35%);
+}
+
+.button.warn:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--warn-color) r g b / 35%);
+}
+
+.button.info:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--info-color) r g b / 35%);
 }

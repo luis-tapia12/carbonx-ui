@@ -15,3 +15,5 @@ export type CSSUnit =
 export type CSSDimension = `${number}${CSSUnit}`;
 
 export type Size = 'sm' | 'md' | 'lg' | 'xl';
+
+export type Variant = 'primary' | 'secondary' | 'success' | 'error' | 'warn' | 'info';
