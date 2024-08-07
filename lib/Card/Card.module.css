@@ -1,0 +1,17 @@
+.card {
+	box-sizing: border-box;
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-size);
+	background-color: var(--secondary-color);
+	margin: 0.5rem;
+	padding: 2rem;
+}
+
+.cardTitle {
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.cardBody > p:last-child {
+	margin-bottom: 0;
+}

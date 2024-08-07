@@ -1,0 +1,17 @@
+.select {
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-size);
+	background-image: url('../assets/arrow.png');
+	background-size: 14px 14px;
+	background-repeat: no-repeat;
+	background-position: right 1rem center;
+	padding: 0.5rem 2.5rem 0.5rem 1rem;
+	font-size: 0.9rem;
+	appearance: none;
+}
+
+.select:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 35%);
+	outline: 0;
+}
