@@ -1,6 +1,5 @@
 {
 	"name": "carbonx-ui",
-	"private": true,
 	"version": "0.1.0",
 	"description": "React components library for CarbonX Platform",
 	"type": "module",
@@ -18,8 +17,7 @@
 	"dependencies": {
 		"classnames": "^2.5.1",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-transition-group": "^4.4.5"
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^1.5.0",

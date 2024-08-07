@@ -1,0 +1,11 @@
+.avatar {
+	border-radius: 50%;
+	background-color: var(--primary-color);
+	background-size: cover;
+	color: var(--text-color);
+	text-transform: uppercase;
+	text-align: center;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

@@ -1,0 +1,13 @@
+.textarea {
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-size);
+	padding: 0.5rem;
+	font-size: 0.9rem;
+	resize: vertical;
+}
+
+.textarea:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 35%);
+	outline: 0;
+}
