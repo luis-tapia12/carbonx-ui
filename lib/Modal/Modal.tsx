@@ -1,5 +1,4 @@
 import { MouseEvent, ReactNode, useRef } from 'react';
-import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
 
 import Card from '../Card/Card';
@@ -29,13 +28,13 @@ const Modal: React.FC<ModalProps> = ({ children, size = 'md', show, title, onClo
 	);
 
 	return (
-		<CSSTransition classNames={styles} in={show} nodeRef={nodeRef} timeout={400} unmountOnExit>
+		show && (
 			<div className={styles.modalContainer} ref={nodeRef}>
 				<Card className={classNames(styles.modal, styles[size])} title={modalTitle}>
 					{children}
 				</Card>
 			</div>
-		</CSSTransition>
+		)
 	);
 };
 
