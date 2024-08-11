@@ -5,6 +5,23 @@
 	width: 100%;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.25);
+	transition: opacity 0.4s ease-in-out;
+}
+
+.exited {
+	opacity: 0;
+}
+
+.entering {
+	opacity: 1;
+}
+
+.entered {
+	opacity: 1;
+}
+
+.exiting {
+	opacity: 0;
 }
 
 .modalTitle {
@@ -36,6 +53,23 @@
 
 .modal {
 	margin: 2rem auto;
+	transition: transform 0.4s ease-in-out;
+}
+
+.exited .modal {
+	transform: translateY(-30px);
+}
+
+.entering .modal {
+	transform: translateY(0);
+}
+
+.entered .modal {
+	transform: translateY(0);
+}
+
+.exiting .modal {
+	transform: translateY(-30px);
 }
 
 .modal.sm {
@@ -56,4 +90,5 @@
 	width: 100%;
 	height: 100%;
 	margin: 0 !important;
+	transform: none !important;
 }

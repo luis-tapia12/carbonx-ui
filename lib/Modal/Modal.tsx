@@ -1,7 +1,8 @@
-import { MouseEvent, ReactNode, useRef } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import Card from '../Card/Card';
+import Transition from '../Transition';
 
 import closeIcon from '../assets/close-icon.png';
 import styles from './Modal.module.css';
@@ -16,8 +17,6 @@ export type ModalProps = {
 };
 
 const Modal: React.FC<ModalProps> = ({ children, size = 'md', show, title, onClose }) => {
-	const nodeRef = useRef(null);
-
 	const modalTitle = (
 		<div className={styles.modalTitle}>
 			{title}
@@ -28,13 +27,11 @@ const Modal: React.FC<ModalProps> = ({ children, size = 'md', show, title, onClo
 	);
 
 	return (
-		show && (
-			<div className={styles.modalContainer} ref={nodeRef}>
-				<Card className={classNames(styles.modal, styles[size])} title={modalTitle}>
-					{children}
-				</Card>
-			</div>
-		)
+		<Transition in={show} timeout={400} classNames={styles} className={styles.modalContainer}>
+			<Card className={classNames(styles.modal, styles[size])} title={modalTitle}>
+				{children}
+			</Card>
+		</Transition>
 	);
 };
 
