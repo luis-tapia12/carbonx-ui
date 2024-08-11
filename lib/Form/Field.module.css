@@ -1,0 +1,18 @@
+.error > span[data-icon='true'] {
+	background-color: var(--error-color);
+	color: #ffffff;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	display: inline-block;
+	margin-right: 0.35rem;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 0.75rem;
+}
+
+.error {
+	margin-top: var(--radius-size);
+	color: var(--error-color);
+	font-size: 0.9rem;
+}

@@ -1,4 +1,5 @@
 .checkboxContainer {
+	width: fit-content;
 	display: flex;
 	align-items: center;
 }
@@ -43,4 +44,20 @@
 
 .checkbox:checked::after {
 	opacity: 1;
+}
+
+.checkboxError .checkbox {
+	border-color: var(--error-color);
+}
+
+.checkboxError .checkboxContainer {
+	color: var(--error-color);
+}
+
+.checkboxError .checkbox:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--error-color) r g b / 35%);
+}
+
+.checkboxError .checkbox:checked {
+	background-color: var(--error-color);
 }

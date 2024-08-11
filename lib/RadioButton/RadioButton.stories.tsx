@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import RadioButton from './RadioButton';
-import { fn } from '@storybook/test';
 
 const meta = {
 	component: RadioButton
@@ -13,10 +12,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		checked: false,
 		disabled: false,
-		label: 'Label',
-		onChange: fn()
+		label: 'Label'
+	}
+};
+
+export const WithError: Story = {
+	args: {
+		disabled: false,
+		error: 'This field is invalid',
+		label: 'Label'
 	}
 };
 

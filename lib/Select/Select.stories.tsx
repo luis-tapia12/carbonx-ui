@@ -21,3 +21,17 @@ export const Default: Story = {
 		placeholder: 'Select one...'
 	}
 };
+
+export const WithError: Story = {
+	args: {
+		disabled: false,
+		options: [
+			{ id: '1', label: 'label1' },
+			{ id: '2', label: 'label2' },
+			{ id: '3', label: 'label3' }
+		],
+		placeholder: 'Select one...',
+		error: 'This field is invalid',
+		label: 'Label'
+	}
+};
