@@ -7,48 +7,51 @@
 
 .switch input {
 	cursor: pointer;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
 	opacity: 0;
 	width: 32px;
 	height: 20px;
+	margin: 0 0.5rem 0 0;
 }
 
-.switch.active::before {
+.switch input:checked + .control::before {
 	background-color: var(--primary-color);
+	border-color: var(--primary-color);
 }
 
-.switch.disabled,
-.switch.disabled input {
+.switch input:checked + .control::after {
+	background-color: var(--text-color);
+}
+
+.switch.disabled {
 	cursor: default;
-}
-
-.switch.disabled::before {
 	opacity: 0.5;
 }
 
-.switch.active::after {
+.switch input:focus + .control::before {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 35%);
+}
+
+.switch input:checked + .control::after {
 	transform: translateX(calc(100% - 2px));
 }
 
-.switch::before {
+.switch .control::before {
 	content: '';
 	border-radius: 10px;
-	background-color: var(--border-color);
+	background-color: var(--text-color);
 	position: absolute;
 	display: block;
 	top: 0;
 	width: 32px;
 	height: 20px;
 	transition: all 0.2s ease-in-out;
+	border: 1px solid var(--border-color);
 }
 
-.switch::after {
+.switch .control::after {
 	content: '';
 	border-radius: 50%;
-	background-color: var(--text-color);
+	background-color: var(--border-color);
 	position: absolute;
 	display: block;
 	top: 3px;
@@ -56,4 +59,25 @@
 	width: 14px;
 	height: 14px;
 	transition: all 0.2s ease-in-out;
+}
+
+.switchError .control::before {
+	border-color: var(--error-color);
+}
+
+.switchError .control::after {
+	background-color: var(--error-color);
+}
+
+.switchError .switch {
+	color: var(--error-color);
+}
+
+.switchError input:focus + .control::before {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--error-color) r g b / 35%);
+}
+
+.switchError input:checked + .control::before {
+	background-color: var(--error-color);
+	border-color: var(--error-color);
 }

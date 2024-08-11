@@ -1,4 +1,5 @@
 .radioContainer {
+	width: fit-content;
 	display: flex;
 	align-items: center;
 }
@@ -12,6 +13,10 @@
 	display: flex;
 	transition: all 0.2s ease-in-out;
 	margin: 0 0.5rem 0 0;
+}
+
+.radioContainer.disabled {
+	opacity: 0.5;
 }
 
 .radio:focus {
@@ -40,4 +45,20 @@
 
 .radio:checked::after {
 	opacity: 1;
+}
+
+.radioError .radio {
+	border-color: var(--error-color);
+}
+
+.radioError .radioContainer {
+	color: var(--error-color);
+}
+
+.radioError .radio:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--error-color) r g b / 35%);
+}
+
+.radioError .radio:checked {
+	background-color: var(--error-color);
 }

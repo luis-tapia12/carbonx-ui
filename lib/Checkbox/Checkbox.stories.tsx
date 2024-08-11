@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Checkbox from './Checkbox';
-import { fn } from '@storybook/test';
 
 const meta = {
 	component: Checkbox
@@ -13,10 +12,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		checked: false,
 		disabled: false,
 		label: 'Label',
-		value: '',
-		onChange: fn()
+		value: ''
+	}
+};
+
+export const WithError: Story = {
+	args: {
+		disabled: false,
+		error: 'This field is invalid',
+		label: 'Label',
+		value: ''
 	}
 };
