@@ -6,6 +6,7 @@ import styles from './Avatar.module.css';
 import type { CSSDimension } from '../types';
 
 export type AvatarProps = {
+	bordered?: boolean;
 	className?: string;
 	name: string | string[];
 	size?: CSSDimension;
@@ -20,7 +21,14 @@ const formatName = (name: string | string[]) => {
 	return names.map((word) => word.charAt(0));
 };
 
-const Avatar: React.FC<AvatarProps> = ({ className, name, size = '50px', src, ...rest }) => {
+const Avatar: React.FC<AvatarProps> = ({
+	bordered,
+	className,
+	name,
+	size = '50px',
+	src,
+	...rest
+}) => {
 	const style: React.CSSProperties = {
 		fontSize: calcFontSize(size),
 		height: size,
@@ -38,7 +46,11 @@ const Avatar: React.FC<AvatarProps> = ({ className, name, size = '50px', src, ..
 	}
 
 	return (
-		<div className={classNames(styles.avatar, className)} style={style} {...rest}>
+		<div
+			className={classNames(styles.avatar, className, { [styles.bordered]: bordered })}
+			style={style}
+			{...rest}
+		>
 			{formatName(name)}
 		</div>
 	);

@@ -21,3 +21,11 @@ export const Default: Story = {
 		disabled: false
 	}
 };
+
+export const WithError: Story = {
+	args: {
+		disabled: false,
+		error: 'This field is invalid',
+		label: 'Label'
+	}
+};

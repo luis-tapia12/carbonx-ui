@@ -1,3 +1,8 @@
+.textareaContainer {
+	display: flex;
+	flex-direction: column;
+}
+
 .textarea {
 	border: 1px solid var(--border-color);
 	border-radius: var(--radius-size);
@@ -10,4 +15,16 @@
 	border-color: var(--primary-color);
 	box-shadow: 0 0 0 0.2rem rgb(from var(--primary-color) r g b / 35%);
 	outline: 0;
+}
+
+.textareaError .textareaContainer {
+	color: var(--error-color);
+}
+
+.textareaError .textarea {
+	border-color: var(--error-color);
+}
+
+.textareaError .textarea:focus {
+	box-shadow: 0 0 0 0.2rem rgb(from var(--error-color) r g b / 35%);
 }

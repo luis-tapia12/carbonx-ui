@@ -19,3 +19,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New **Select** component
 - New **Switch** component
 - New **TextArea** component
+
+## [0.2.0] - 2024-08-11
+
+### Added
+- New **Transition** component
+- New **Modal** animation
+- Add errors to form fields (**Checkbox**, **Input**, **RadioButton**, **Select**, **Switch**, **TextArea**)
+
+### Changed
+- Update **Button** variants
+- Update **Avatar** options

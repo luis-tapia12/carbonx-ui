@@ -25,6 +25,14 @@ export const WithImage: Story = {
 	}
 };
 
+export const WithBorder: Story = {
+	args: {
+		bordered: true,
+		name: 'Avatar',
+		src: 'https://picsum.photos/200'
+	}
+};
+
 export const WithSize: Story = {
 	args: {
 		name: 'Avatar',
