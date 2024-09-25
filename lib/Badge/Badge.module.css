@@ -1,0 +1,38 @@
+.badge {
+	border: 1px solid transparent;
+	border-radius: calc(0.85rem + var(--padding-y-sm) / 2);
+	padding: var(--padding-y-sm) var(--padding-x-sm);
+	font-size: 0.85rem;
+	font-weight: bold;
+}
+
+.badge.primary {
+	background-color: rgb(from var(--primary-color) r g b / 25%);
+	color: var(--primary-color);
+}
+
+.badge.secondary {
+	border-color: var(--border-color);
+	background-color: rgb(from var(--secondary-color) r g b / 65%);
+	color: var(--primary-color);
+}
+
+.badge.success {
+	background-color: rgb(from var(--success-color) r g b / 25%);
+	color: var(--success-color);
+}
+
+.badge.error {
+	background-color: rgb(from var(--error-color) r g b / 25%);
+	color: var(--error-color);
+}
+
+.badge.warn {
+	background-color: rgb(from var(--warn-color) r g b / 25%);
+	color: var(--warn-color);
+}
+
+.badge.info {
+	background-color: rgb(from var(--info-color) r g b / 25%);
+	color: var(--info-color);
+}

@@ -1,0 +1,31 @@
+.hidden img {
+	transform: rotate(-90deg);
+}
+
+.acordionTitle {
+	border-bottom: 1px solid var(--border-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.acordionTitle img {
+	width: 14px;
+	height: 14px;
+	transition: all 0.3s ease;
+	user-select: none;
+}
+
+.acordionBody {
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+	max-height: 0;
+	overflow: hidden;
+	border-bottom: 1px solid transparent;
+}
+
+.acordion:last-child .acordionBody {
+	border-bottom-color: transparent !important;
+}
