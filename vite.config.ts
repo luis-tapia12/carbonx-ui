@@ -23,7 +23,7 @@ export default defineConfig({
 			formats: ['es']
 		},
 		rollupOptions: {
-			external: ['react', 'react/jsx-runtime'],
+			external: ['react', 'react/jsx-runtime', 'react-transition-group'],
 			input: Object.fromEntries(
 				glob
 					.sync('lib/**/*.{ts,tsx}', {

@@ -30,3 +30,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update **Button** variants
 - Update **Avatar** options
+
+## [0.3.0] - 2024-09-24
+
+### Added
+- New **Badge** component
+- New **Breadcrumb** component
+- New **Accordion** component
+- New **Password** component
+- New **Tooltip** component
+- New **Table** component
+
+### Changed
+- Update **Modal** transition engine
+
+### Removed
+
+- Delete **Transition** component

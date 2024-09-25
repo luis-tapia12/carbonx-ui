@@ -1,8 +1,8 @@
-import { MouseEvent, ReactNode } from 'react';
+import { MouseEvent, ReactNode, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
 
 import Card from '../Card/Card';
-import Transition from '../Transition';
 
 import closeIcon from '../assets/close-icon.png';
 import styles from './Modal.module.css';
@@ -17,6 +17,7 @@ export type ModalProps = {
 };
 
 const Modal: React.FC<ModalProps> = ({ children, size = 'md', show, title, onClose }) => {
+	const nodeRef = useRef<HTMLDivElement>(null!);
 	const modalTitle = (
 		<div className={styles.modalTitle}>
 			{title}
@@ -27,11 +28,24 @@ const Modal: React.FC<ModalProps> = ({ children, size = 'md', show, title, onClo
 	);
 
 	return (
-		<Transition in={show} timeout={400} classNames={styles} className={styles.modalContainer}>
-			<Card className={classNames(styles.modal, styles[size])} title={modalTitle}>
-				{children}
-			</Card>
-		</Transition>
+		<CSSTransition
+			in={show}
+			timeout={400}
+			classNames={{
+				enter: styles.entering,
+				enterActive: styles.entered,
+				exit: styles.exiting,
+				exitActive: styles.exited
+			}}
+			nodeRef={nodeRef}
+			unmountOnExit
+		>
+			<div className={styles.modalContainer} ref={nodeRef}>
+				<Card className={classNames(styles.modal, styles[size])} title={modalTitle}>
+					{children}
+				</Card>
+			</div>
+		</CSSTransition>
 	);
 };
 
