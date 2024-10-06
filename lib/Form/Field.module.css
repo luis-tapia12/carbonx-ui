@@ -12,6 +12,8 @@
 }
 
 .error {
+	display: flex;
+	align-items: center;
 	margin-top: var(--radius-size);
 	color: var(--error-color);
 	font-size: 0.9rem;

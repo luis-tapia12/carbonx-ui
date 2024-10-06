@@ -26,19 +26,21 @@ const Password: React.FC<PasswordProps> = ({ className, error, label, visible, .
 		<div className={classNames({ [styles.inputError]: error })}>
 			<label className={classNames(styles.inputContainer, className)}>
 				{label && <span>{label}</span>}
-				<input
-					className={classNames(styles.input, { [styles.visible]: visible })}
-					type={show ? 'text' : 'password'}
-					{...rest}
-				/>
-				{visible && (
-					<button
-						className={classNames(styles.toggle, { [styles.visible]: show })}
-						onClick={handleToggleShow}
-					>
-						<img src={eye} alt="eye" />
-					</button>
-				)}
+				<div className={styles.password}>
+					<input
+						className={classNames(styles.input, { [styles.visible]: visible })}
+						type={show ? 'text' : 'password'}
+						{...rest}
+					/>
+					{visible && (
+						<button
+							className={classNames(styles.toggle, { [styles.visible]: show })}
+							onClick={handleToggleShow}
+						>
+							<img src={eye} alt="eye" />
+						</button>
+					)}
+				</div>
 			</label>
 			<Error error={error} />
 		</div>

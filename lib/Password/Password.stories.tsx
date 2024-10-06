@@ -15,3 +15,12 @@ export const Default: Story = {
 		visible: true
 	}
 };
+
+export const WithError: Story = {
+	args: {
+		disabled: false,
+		error: 'This field is invalid',
+		label: 'Label',
+		visible: true
+	}
+};
