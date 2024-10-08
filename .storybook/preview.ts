@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 
 import '../lib/styles.css';
+import './fontawesome.css';
 
 const preview: Preview = {
 	parameters: {

@@ -1,0 +1,125 @@
+:root {
+	--size-sm: 3.5rem;
+	--sidebar-width: 16rem;
+}
+
+.sidebarRoot {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	position: relative;
+}
+
+.trigger {
+	height: var(--size-sm);
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.header {
+	background-color: var(--primary-color);
+	width: 100%;
+	height: var(--size-sm);
+	border-bottom: 1px solid var(--border-color);
+	display: flex;
+	align-items: center;
+}
+
+.sidebar {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	min-width: var(--size-sm);
+	max-width: var(--size-sm);
+	transition: min-width 0.3s ease;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border-right: 1px solid var(--border-color);
+}
+
+.sidebar.show {
+	min-width: var(--sidebar-width);
+}
+
+.root {
+	flex-grow: 1;
+}
+
+.menu {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0.5rem;
+}
+
+.content {
+	max-height: calc(100vh - var(--size-sm));
+	overflow: auto;
+}
+
+.backdrop {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.25);
+	display: none;
+}
+
+.item {
+	white-space: nowrap;
+	padding: 0.5rem 0;
+	cursor: pointer;
+}
+
+.item.active {
+	background-color: rgb(from var(--secondary-color) r g b / 50%);
+	border-radius: var(--radius-size);
+}
+
+.item:hover {
+	background-color: rgb(from var(--secondary-color) r g b / 25%);
+	border-radius: var(--radius-size);
+}
+
+.itemIcon {
+	width: calc(var(--size-sm) - 1rem);
+	text-align: center;
+}
+
+.toggle {
+	cursor: pointer;
+	display: none;
+	margin-left: 1rem;
+	border: none;
+	background-color: transparent;
+	color: var(--secondary-color);
+}
+
+.toggle:hover {
+	border-radius: var(--radius-size);
+	background-color: rgb(from var(--secondary-color) r g b / 25%);
+}
+
+@media only screen and (max-width: 600px) {
+	.toggle {
+		display: block;
+	}
+
+	.sidebar {
+		min-width: 0px;
+		width: 0px;
+		position: absolute;
+		z-index: 2;
+	}
+
+	.backdrop {
+		display: block;
+	}
+}
