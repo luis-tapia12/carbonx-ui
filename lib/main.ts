@@ -14,6 +14,7 @@ export { default as Password } from './Password';
 export { default as RadioButton } from './RadioButton';
 export { default as Select } from './Select';
 export { default as Sidebar } from './Sidebar';
+export { default as Spinner } from './Spinner';
 export { default as Switch } from './Switch';
 export { default as Table } from './Table';
 export { default as TextArea } from './TextArea';

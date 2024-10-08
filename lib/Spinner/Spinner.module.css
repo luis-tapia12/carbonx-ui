@@ -1,0 +1,62 @@
+.spinner {
+	transition: all 0.7s ease;
+}
+
+.spinner.secondary rect {
+	fill: var(--secondary-color);
+}
+
+.spinner rect {
+	fill: var(--primary-color);
+	transition: all 0.7s ease;
+}
+
+.enter rect {
+	fill: transparent;
+	stroke-width: 5;
+	stroke: var(--primary-color);
+	width: 50px;
+}
+
+.enter.spinner.secondary rect,
+.enterDone.spinner.secondary rect {
+	fill: transparent;
+	stroke: var(--secondary-color);
+}
+
+.enterDone rect {
+	fill: transparent;
+	stroke-width: 5;
+	stroke: var(--primary-color);
+	width: 50px;
+}
+
+.exit rect {
+	fill: var(--primary-color);
+}
+
+.exitDone rect {
+	fill: var(--primary-color);
+}
+
+.enter {
+	transform: rotate(45deg);
+}
+
+.enterDone {
+	animation: rotate 1.5s linear infinite normal forwards;
+}
+
+.exitDone {
+	transform: rotate(0deg);
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(45deg);
+	}
+
+	to {
+		transform: rotate(405deg);
+	}
+}
