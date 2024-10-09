@@ -19,3 +19,5 @@ export { default as Switch } from './Switch';
 export { default as Table } from './Table';
 export { default as TextArea } from './TextArea';
 export { default as Tooltip } from './Tooltip';
+
+export { default as Notification, NotificationProvider, useNotification } from './Notification';
